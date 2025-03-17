@@ -19,7 +19,7 @@ const Home = () => {
 
       <section className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold mb-12 text-center">
-          Github <span className="text-primary">Activity</span>
+          Github Activity
         </h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

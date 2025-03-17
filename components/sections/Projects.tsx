@@ -18,7 +18,7 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold mb-4">
-            Featured <span className="text-primary">Projects</span>
+            Featured Projects
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Explore my latest projects showcasing my expertise in full-stack

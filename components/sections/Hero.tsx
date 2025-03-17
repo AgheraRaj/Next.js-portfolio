@@ -16,7 +16,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Hi , I&#39;m <span className="text-primary">Raj Aghera</span>
+            Hi , I&#39;m Raj Aghera
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             Full Stack Developer crafting modern web experiences

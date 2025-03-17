@@ -15,7 +15,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold mb-6">
-            Let&apos;s <span className="text-primary">Connect</span>
+            Let&apos;s Connect
           </h2>
           <p className="text-muted-foreground mb-8">
             I&apos;m always open to discussing new projects, creative ideas, or
