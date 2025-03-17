@@ -1,5 +1,6 @@
 "use client";
 import GithubStats from "@/components/github-stats";
+import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
@@ -28,6 +29,7 @@ const Home = () => {
           <GithubStats username="AgheraRaj" />
         </motion.div>
       </section>
+      <Contact />
     </main>
   );
 };
