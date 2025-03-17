@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background md:mx-5">
       <Hero />
       <Skills />
       <Testimonials />
