@@ -38,24 +38,21 @@ const CaseStudyModal = ({
           <DialogTitle className="text-xl">{project.title}</DialogTitle>
         </DialogHeader>
 
-        {/* Project image */}
-        <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 672px"
-          />
-        </div>
-
         {/* Tech badges */}
-        <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <Badge key={tech} variant="secondary" className="text-xs">
-              {tech}
-            </Badge>
-          ))}
+        <div className="space-y-5">
+          <h4 className="font-semibold mb-2 mt-4 text-muted-foreground uppercase text-xs tracking-wide">
+            Skills
+          </h4>
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Case study content */}
@@ -93,22 +90,6 @@ const CaseStudyModal = ({
               ))}
             </ul>
           </div>
-        </div>
-
-        {/* Actions */}
-        <div className="flex gap-3 pt-2">
-          <Button asChild size="sm" className="gap-2">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4" />
-              Live Demo
-            </a>
-          </Button>
-          <Button asChild variant="outline" size="sm" className="gap-2">
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Github className="w-4 h-4" />
-              Source Code
-            </a>
-          </Button>
         </div>
       </DialogContent>
     </Dialog>
@@ -151,16 +132,6 @@ const ProjectCard = ({
             onClick={() => onOpenModal(project)}
           >
             View Case Study
-          </Button>
-          <Button asChild size="sm" variant="ghost" className="gap-1 text-white hover:text-white hover:bg-white/10">
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Github className="w-4 h-4" />
-            </a>
-          </Button>
-          <Button asChild size="sm" variant="ghost" className="gap-1 text-white hover:text-white hover:bg-white/10">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4" />
-            </a>
           </Button>
         </div>
       </div>

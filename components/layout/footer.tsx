@@ -92,15 +92,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-muted-foreground text-center md:text-left">
+        <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row justify-start items-start">
+          <p className="text-sm text-muted-foreground text-left md:text-left">
             © {new Date().getFullYear()} Raj Aghera. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/40 px-4 py-2 rounded-full border border-border/50">
-            <span>Built with</span>
-            <Heart className="w-4 h-4 text-red-500 animate-pulse fill-red-500/20" />
-            <span>and Next.js</span>
-          </div>
         </div>
       </div>
     </footer>

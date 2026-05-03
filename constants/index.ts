@@ -2,6 +2,12 @@
 export const technologies = [
   // Frontend
   {
+    name: "JavaScript",
+    category: "Frontend",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    proficiency: 90,
+  },
+  {
     name: "React",
     category: "Frontend",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -33,9 +39,9 @@ export const technologies = [
     proficiency: 80,
   },
   {
-    name: "GraphQL",
+    name: "Redis",
     category: "Backend",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
     proficiency: 70,
   },
   // Database
@@ -77,105 +83,209 @@ export const skillCategories = ["All", "Frontend", "Backend", "Database", "DevOp
 
 // ─── Timeline (About section) ─────────────────────────────────────────────────
 export const timeline = [
-  {
+    {
     year: "2022",
-    title: "Started B.Tech in Computer Science and Engineering",
-    description: "Began my journey in computer science and engineering, diving deep into programming fundamentals and web technologies.",
+    title: "Computer Science Foundation",
+    description: "Began my B.Tech journey, building a strong academic foundation in algorithms, data structures, and programming fundamentals.",
     type: "education" as const,
   },
   {
     year: "2023",
-    title: "First Freelance Project",
-    description: "Built my first client website — a business landing page with a CMS. Learned real-world expectations fast.",
-    type: "work" as const,
-  },
-  {
-    year: "2023",
-    title: "Mastered Full-Stack Development",
-    description: "Completed multiple projects with React.js, Node.js, and MongoDB. Shifted focus to building complete products.",
+    title: "Frontend & UI Engineering",
+    description: "Focused on crafting highly interactive and responsive user interfaces using React, JavaScript, and modern CSS techniques.",
     type: "milestone" as const,
   },
   {
     year: "2024",
-    title: "Built AI-Integrated Applications",
-    description: "Integrated OpenAI APIs into production apps. Developed a task manager with AI prioritization used by 100+ users.",
-    type: "work" as const,
-  },
-  {
-    year: "2024",
-    title: "Open Source Contributions",
-    description: "Started contributing to open-source projects. Currently maintaining two npm packages with 500+ weekly downloads.",
+    title: "Full-Stack Expansion",
+    description: "Expanded my architecture to the backend, integrating Node.js, Express, and databases to build secure and scalable APIs.",
     type: "milestone" as const,
   },
   {
     year: "2025",
-    title: "Available for Freelance & Full-Time",
-    description: "Actively looking for exciting projects and opportunities. Open to remote and Ahmedabad-based roles.",
+    title: "Delivering End-to-End Solutions",
+    description: "Transitioned from conceptual knowledge to building complete, production-ready full-stack applications with real-world use cases.",
+    type: "work" as const,
+  },
+  {
+    year: "2025",
+    title: "Specializing in Modern Web Stacks",
+    description: "Deepened expertise in Next.js and TypeScript to build SEO-friendly, high-performance web applications tailored for business growth.",
+    type: "milestone" as const,
+  },
+  {
+    year: "2026",
+    title: "Open for Freelance & Full-Time",
+    description: "Actively partnering with businesses and teams to deliver premium digital experiences. Open to remote and Ahmedabad-based roles.",
     type: "current" as const,
   },
+
 ];
 
 // ─── Projects ─────────────────────────────────────────────────────────────────
 export const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with real-time inventory management, secure payments, and an intuitive admin dashboard.",
-    // TODO: Replace with real screenshot → put image in /public/projects/ecommerce.png
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "PostgreSQL"],
+    title: "Job Application Platform",
+    description: "A comprehensive platform connecting job seekers with employers, featuring resume management, application tracking, and an intuitive dashboard.",
+    image: "https://cdn.dribbble.com/userupload/15633227/file/original-ebb610a7bf4f699a0aad4f2837e4763e.png?resize=1600x1138&vertical=center",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "MongoDB"],
     category: "Full-Stack",
-    liveUrl: "https://ecommerce-demo.com",
-    githubUrl: "https://github.com/AgheraRaj/ecommerce",
+    liveUrl: "#",
+    githubUrl: "#",
     features: [
-      "Real-time inventory tracking",
-      "Secure payment processing via Stripe",
-      "Admin dashboard with analytics",
-      "Order management & email notifications",
+      "User authentication and role management",
+      "Dynamic resume parsing and matching",
+      "Real-time application status tracking",
+      "Employer dashboard for job postings"
     ],
-    // Case-study details shown in modal
-    problem: "The client was manually tracking inventory in spreadsheets and losing sales due to overselling.",
-    solution: "Built a real-time inventory system with PostgreSQL row-level locking and Stripe webhooks for instant order sync.",
-    impact: "Reduced inventory errors by 95% and increased checkout completion rate by 30%.",
+    problem: "Job seekers needed a centralized place to track applications, while employers needed a streamlined hiring pipeline.",
+    solution: "Developed a full-stack portal with custom dashboards for both roles, integrating a robust REST API for seamless data flow.",
+    impact: "Created a scalable architecture capable of handling concurrent job postings and applications efficiently.",
   },
   {
-    title: "AI-Powered Task Manager",
-    description:
-      "Smart task management application that uses AI to prioritize and categorize tasks, with team collaboration features.",
-    image: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?w=800&h=600&fit=crop",
-    technologies: ["React", "Node.js", "OpenAI", "MongoDB", "WebSocket"],
-    category: "Full-Stack",
-    liveUrl: "https://taskmanager-demo.com",
-    githubUrl: "https://github.com/AgheraRaj/taskmanager",
-    features: [
-      "AI task prioritization via GPT-4",
-      "Real-time collaboration with WebSockets",
-      "Custom workflow automation",
-      "Analytics dashboard",
-    ],
-    problem: "Teams struggled to prioritize their task backlog, wasting 30+ mins daily on planning.",
-    solution: "Integrated OpenAI to auto-categorize and score tasks by urgency and impact based on natural language descriptions.",
-    impact: "100+ active users. Average planning time cut from 35 minutes to under 5 minutes.",
-  },
-  {
-    title: "Social Media Analytics",
-    description:
-      "Comprehensive analytics platform providing engagement insights and growth metrics across multiple social platforms.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    technologies: ["Vue.js", "Python", "D3.js", "AWS", "Redis"],
+    title: "Restaurant Order Dashboard",
+    description: "A dynamic frontend interface for restaurant staff to manage incoming orders, track table statuses, and monitor operations.",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop",
+    technologies: ["React", "Redux", "Tailwind CSS", "Recharts", "Framer Motion"],
     category: "Frontend",
-    liveUrl: "https://analytics-demo.com",
-    githubUrl: "https://github.com/AgheraRaj/analytics",
+    liveUrl: "#",
+    githubUrl: "#",
     features: [
-      "Cross-platform analytics aggregation",
-      "Custom report generation as PDF",
-      "Engagement trend analysis with D3.js",
-      "Redis-cached real-time updates",
+      "Real-time order queue visualization",
+      "Drag-and-drop table management",
+      "Interactive revenue charts",
+      "Responsive layout for POS systems"
     ],
-    problem: "Marketing teams were juggling 4 different platform dashboards with no unified view.",
-    solution: "Built a single-pane dashboard that pulls from multiple APIs, normalises data, and presents unified metrics.",
-    impact: "Saved marketing team 10+ hours/week. Onboarded 3 paying clients within first month.",
+    problem: "Restaurant staff struggled with chaotic paper tickets and inefficient table management during peak hours.",
+    solution: "Built a highly responsive and interactive UI that centralizes all order and table data into a single dashboard.",
+    impact: "Improved order processing speed and reduced missed tickets through intuitive visual cues.",
   },
+  {
+    title: "HR Management Dashboard",
+    description: "An administrative frontend application designed for HR teams to track employee attendance, payroll, and performance metrics.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    technologies: ["React", "Redux", "Tailwind CSS", "Recharts", "Framer Motion"],
+    category: "Frontend",
+    liveUrl: "#",
+    githubUrl: "#",
+    features: [
+      "Interactive employee directory",
+      "Visualized attendance and leave data",
+      "Payroll summary tables",
+      "Customizable metric widgets"
+    ],
+    problem: "HR departments needed a modern, visually appealing way to interpret complex employee data without spreadsheets.",
+    solution: "Designed a clean, accessibility-focused dashboard using modern data visualization libraries for instant insights.",
+    impact: "Streamlined data readability, allowing HR to make faster decisions regarding resource allocation.",
+  },
+  {
+    title: "Efive Form Management",
+    description: "A robust form management system developed during my internship to handle complex data collection, validation, and storage.",
+    image: "https://images.pexels.com/photos/6928879/pexels-photo-6928879.jpeg",
+    technologies: ["React.js", "React Hook Form", "Java", "Spring Boot", "MySQL"],
+    category: "Full-Stack",
+    liveUrl: "#",
+    githubUrl: "#",
+    features: [
+      "Dynamic form generation based on schemas",
+      "Strict client and server-side validation",
+      "Secure data submission and storage",
+      "Admin panel for reviewing submissions"
+    ],
+    problem: "The company needed a scalable way to deploy various types of data collection forms without writing new code for each.",
+    solution: "Implemented a dynamic form builder leveraging Zod for rock-solid type safety and validation.",
+    impact: "Significantly reduced development time for new internal forms and improved overall data integrity.",
+  },
+  {
+    title: "Crysenta (Fertilizer Platform)",
+    description: "A modern, engaging website for a fertilizer brand, focusing on product showcases, agricultural education, and brand awareness.",
+    image: "https://images.pexels.com/photos/37099126/pexels-photo-37099126.jpeg",
+    technologies: ["React.js", "Tailwind CSS", "Express.js", "MongoDB Atlas", "Cloudinary"],
+    category: "Full-Stack",
+    liveUrl: "#",
+    githubUrl: "#",
+    features: [
+      "Smooth scroll animations and transitions",
+      "Interactive product catalog",
+      "Responsive, mobile-first design",
+      "SEO optimized structure"
+    ],
+    problem: "The brand needed a digital presence that felt modern and trustworthy to both traditional farmers and enterprises.",
+    solution: "Crafted a visually stunning interface with micro-animations and a nature-inspired palette to highlight products.",
+    impact: "Established a strong digital footprint and provided an intuitive, engaging catalog for their customer base.",
+  },
+  {
+    title: "Real-time Chat Application",
+    description: "A full-stack messaging platform supporting instant text communication, online presence, and group chats.",
+    image: "https://images.pexels.com/photos/6215002/pexels-photo-6215002.jpeg?_gl=1*h86539*_ga*MTQ1MjM3NDMzNi4xNzM0NTAwMzEw*_ga_8JE65Q40S6*czE3Nzc4MTUyOTAkbzgkZzEkdDE3Nzc4MTU4NDkkajM0JGwwJGgw",
+    technologies: ["React.js", "Express.js", "Socket.io", "MongoDB"],
+    category: "Full-Stack",
+    liveUrl: "#",
+    githubUrl: "#",
+    features: [
+      "Instant messaging via WebSockets",
+      "User online/offline status indicators",
+      "Read receipts and typing indicators",
+      "Secure authentication"
+    ],
+    problem: "Building a communication tool that required zero-latency message delivery and persistent chat history.",
+    solution: "Integrated Socket.io for real-time bi-directional communication alongside a robust MongoDB schema.",
+    impact: "Successfully handled multiple concurrent connections with minimal latency and high reliability.",
+  },
+  {
+    title: "Uber Backend Clone",
+    description: "A scalable backend architecture replicating core ride-sharing functionalities, including driver matching and location tracking.",
+    image: "https://images.pexels.com/photos/9260061/pexels-photo-9260061.jpeg?_gl=1*14dvgbk*_ga*MTQ1MjM3NDMzNi4xNzM0NTAwMzEw*_ga_8JE65Q40S6*czE3Nzc4MTUyOTAkbzgkZzEkdDE3Nzc4MTU0MDIkajExJGwwJGgw",
+    technologies: ["Node.js", "Express", "MongoDB", "Redis", "Socket.io"],
+    category: "Backend",
+    liveUrl: "#",
+    githubUrl: "#",
+    features: [
+      "Geospatial queries for nearby drivers",
+      "Real-time location updates via WebSockets",
+      "Fare calculation algorithms",
+      "Redis caching for active rides"
+    ],
+    problem: "Ride-sharing requires complex spatial data processing and ultra-fast driver-rider matching.",
+    solution: "Utilized PostgreSQL's PostGIS for spatial queries and Redis for maintaining high-speed access to active locations.",
+    impact: "Created a highly optimized API capable of processing rapid location pings efficiently.",
+  },
+  {
+    title: "YouTube Backend Architecture",
+    description: "A robust API mimicking video hosting platform features, including video processing, streaming, and user interactions.",
+    image: "https://images.pexels.com/photos/33440278/pexels-photo-33440278.jpeg?_gl=1*14fpyb7*_ga*MTQ1MjM3NDMzNi4xNzM0NTAwMzEw*_ga_8JE65Q40S6*czE3Nzc4MTUyOTAkbzgkZzEkdDE3Nzc4MTUzMTIkajM4JGwwJGgw",
+    technologies: ["Node.js", "Express", "MongoDB", "Cloudinary"],
+    category: "Backend",
+    liveUrl: "#",
+    githubUrl: "#",
+    features: [
+      "Video upload and processing pipeline",
+      "Chunked video streaming",
+      "Comment and like system architecture",
+      "Subscription and notification models"
+    ],
+    problem: "Handling large media files and ensuring smooth playback without overwhelming the main server.",
+    solution: "Implemented chunked streaming and integrated cloud storage to separate media serving from API logic.",
+    impact: "Achieved scalable media storage and efficient video delivery independent of the core server.",
+  },
+  {
+    title: "E-Commerce API System",
+    description: "A secure and efficient backend system for online retail, handling everything from inventory management to payment processing.",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+    technologies: ["Node.js", "Express", "MongoDB", "Stripe API"],
+    category: "Backend",
+    liveUrl: "#",
+    githubUrl: "#",
+    features: [
+      "Complex relational database schema",
+      "Secure payment gateway integration",
+      "Cart and order state management",
+      "Admin analytics endpoints"
+    ],
+    problem: "E-commerce platforms require bulletproof transaction handling and accurate inventory synchronization.",
+    solution: "Built a strict relational schema with PostgreSQL and integrated Stripe to ensure transactions are safely verified.",
+    impact: "Provided a robust foundation that prevents race conditions and ensures critical data consistency.",
+  }
 ];
 
 // ─── Project Categories (for filter tabs) ─────────────────────────────────────

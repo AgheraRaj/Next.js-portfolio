@@ -89,7 +89,7 @@ const GithubStats = ({ username }: Props) => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto py-10 group/wrapper">
+    <div className="relative w-full max-w-8xl mx-auto py-10 group/wrapper">
       {/* Decorative Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -108,12 +108,12 @@ const GithubStats = ({ username }: Props) => {
         <div className="lg:col-span-4 flex flex-col gap-6">
           
           {/* Main Title Card */}
-          <motion.div variants={itemVariants} className="flex-1 bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl p-8 relative overflow-hidden group">
+          <motion.div variants={itemVariants} className="flex-1 bg-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-8 relative overflow-hidden group">
             <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-colors duration-700" />
             
             <div className="relative z-10 h-full flex flex-col justify-between">
               <div>
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center border border-primary/20 mb-8 shadow-lg shadow-primary/5">
+                <div className="w-14 h-14 rounded-lg flex items-center justify-center border border-primary/20 mb-8 shadow-lg shadow-primary/5">
                   <Github className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-3xl font-bold tracking-tight mb-3">Code Activity</h3>
@@ -137,7 +137,7 @@ const GithubStats = ({ username }: Props) => {
           </motion.div>
 
           {/* Current Streak Card */}
-          <motion.div variants={itemVariants} className="bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl p-6 flex items-center justify-between group overflow-hidden relative">
+          <motion.div variants={itemVariants} className="bg-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 flex items-center justify-between group overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
               <p className="text-sm font-medium text-muted-foreground mb-1 flex items-center gap-2">
@@ -159,7 +159,7 @@ const GithubStats = ({ username }: Props) => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Total Commits Card */}
-            <motion.div variants={itemVariants} className="bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl p-6 relative overflow-hidden group">
+            <motion.div variants={itemVariants} className="bg-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 relative overflow-hidden group">
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-colors duration-500" />
               <div className="flex items-start justify-between relative z-10">
                 <div>
@@ -177,7 +177,7 @@ const GithubStats = ({ username }: Props) => {
             </motion.div>
 
             {/* Best Day Card */}
-            <motion.div variants={itemVariants} className="bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl p-6 relative overflow-hidden group">
+            <motion.div variants={itemVariants} className="bg-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 relative overflow-hidden group">
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-yellow-500/10 rounded-full blur-2xl group-hover:bg-yellow-500/20 transition-colors duration-500" />
               <div className="flex items-start justify-between relative z-10">
                 <div>
@@ -197,7 +197,7 @@ const GithubStats = ({ username }: Props) => {
           </div>
 
           {/* Interactive Bar Chart for Last 30 Days */}
-          <motion.div variants={itemVariants} className="flex-1 bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl p-8 relative overflow-hidden group">
+          <motion.div variants={itemVariants} className="flex-1 bg-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-8 relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
             <div className="flex items-center justify-between mb-8">

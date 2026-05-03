@@ -16,11 +16,12 @@ const typeConfig = {
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 const stats = [
-  { value: "3+",   label: "Years Experience" },
-  { value: "15+",  label: "Projects Completed" },
-  { value: "10+",  label: "Happy Clients" },
-  { value: "500+", label: "Weekly Downloads" },
+  { value: "3+",   label: "Years Coding" },
+  { value: "10+",  label: "Projects Built" },
+  { value: "5+",   label: "Tech Stacks Mastered" }, // Next.js, React, Node, etc.
+  { value: "100%", label: "Client Commitment" },
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,12 +39,12 @@ const itemVariants = {
 // ─── About ────────────────────────────────────────────────────────────────────
 const About = () => {
   return (
-    <section id="about" className="container mx-auto px-4 py-24 relative overflow-hidden">
+    <section id="about" className="container mx-auto px-4 py-20 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none -z-10" />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Left Column: Intro & Stats */}
@@ -64,8 +65,7 @@ const About = () => {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">Experiences</span>
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  I&apos;m a full-stack developer from Ahmedabad, India, passionate about building
-                  intelligent, scalable products that are fast, accessible, and a joy to use.
+                  I&apos;m a full-stack developer based in Ahmedabad, India, specializing in building premium, high-performance web applications. I partner with businesses to transform their ideas into scalable, user-centric digital products.
                 </p>
                 <div className="flex gap-4">
                   <Button className="rounded-md" asChild>
@@ -87,7 +87,7 @@ const About = () => {
                   <motion.div
                     key={stat.label}
                     variants={itemVariants}
-                    className="p-5 rounded-3xl bg-card/40 backdrop-blur-xl border border-border/50 hover:border-primary/30 transition-colors group relative overflow-hidden"
+                    className="p-5 rounded-2xl bg-card/40 backdrop-blur-xl border border-border/50 hover:border-primary/30 transition-colors group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="relative z-10">
