@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Heart, Code2, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Code2, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {

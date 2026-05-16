@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Mail, Code2, FolderOpen, Terminal, ChevronDown } from "lucide-react";
+import { Github, Mail, Code2, FolderOpen, Terminal } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
 
@@ -121,7 +121,6 @@ const Spotlight = () => {
 // ─── Floating Cards ───────────────────────────────────────────────────────────
 const FloatingCard = ({ children, delay = 0, yOffset = 20, className = "" }: { children: React.ReactNode, delay?: number, yOffset?: number, className?: string }) => {
   const y = useMotionValue(0);
-  const springY = useSpring(y, { stiffness: 100, damping: 20 });
 
   return (
     <motion.div
