@@ -39,7 +39,7 @@ const Contact = () => {
     defaultValues: { name: "", email: "", subject: "", message: "" },
   });
 
-  const onSubmit = async (_values: FormValues) => {
+  const onSubmit = async () => {
     setIsSubmitting(true);
     try {
       // Simulate network delay for now

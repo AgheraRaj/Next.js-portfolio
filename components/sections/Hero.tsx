@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Code2, FolderOpen, Terminal } from "lucide-react";
@@ -120,7 +120,6 @@ const Spotlight = () => {
 
 // ─── Floating Cards ───────────────────────────────────────────────────────────
 const FloatingCard = ({ children, delay = 0, yOffset = 20, className = "" }: { children: React.ReactNode, delay?: number, yOffset?: number, className?: string }) => {
-  const y = useMotionValue(0);
 
   return (
     <motion.div
