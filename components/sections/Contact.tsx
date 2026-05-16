@@ -42,19 +42,11 @@ const Contact = () => {
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
     try {
-      /**
-       * TODO: Wire up a real email service.
-       * Recommended options:
-       *   1. Resend (resend.com) — free tier, easy Next.js API route
-       *   2. EmailJS — no backend required
-       *   3. Formspree — drop-in form endpoint
-       */
-
       // Simulate network delay for now
       await new Promise((r) => setTimeout(r, 1000));
 
-      toast.success("Message sent!", {
-        description: "Thanks for reaching out. I'll reply within 24 hours.",
+      toast.success("Got it.", {
+        description: "I'll get back to you within 24 hours.",
       });
       form.reset();
     } catch {
@@ -102,9 +94,11 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Got a Project? <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Let&apos;s Talk.</span>
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+            Whether it&apos;s a product you want to build from scratch, a codebase that needs rescuing, or a role you think I&apos;d crush — my inbox is open.
           </p>
         </motion.div>
 
@@ -139,15 +133,15 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="pt-6 border-t border-border">
-              <p className="font-medium mb-4 text-foreground">Follow Me</p>
+              <p className="font-medium mb-4 text-foreground">Find Me Online</p>
               <div className="flex gap-4">
-                <Button asChild variant="outline" size="icon" className="hover:text-primary hover:border-primary transition-colors">
+                <Button asChild variant="outline" size="icon">
                   <Link href="https://github.com/AgheraRaj" target="_blank" rel="noopener noreferrer">
                     <Github className="w-5 h-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="icon" className="hover:text-primary hover:border-primary transition-colors">
-                  <Link href="https://linkedin.com/in/raj-aghera" target="_blank" rel="noopener noreferrer">
+                <Button asChild variant="outline" size="icon">
+                  <Link href="https://www.linkedin.com/in/raj-aghera-391b25248/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-5 h-5" />
                   </Link>
                 </Button>
@@ -177,7 +171,7 @@ const Contact = () => {
                       <FormItem>
                         <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" className="bg-background/50 focus:bg-background transition-colors" {...field} />
+                          <Input placeholder="Your name" className="bg-background/50 focus:bg-background transition-colors" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -191,7 +185,7 @@ const Contact = () => {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="john@example.com" className="bg-background/50 focus:bg-background transition-colors" {...field} />
+                          <Input type="email" placeholder="your@email.com" className="bg-background/50 focus:bg-background transition-colors" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -207,7 +201,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Subject</FormLabel>
                       <FormControl>
-                        <Input placeholder="Project inquiry / Collaboration" className="bg-background/50 focus:bg-background transition-colors" {...field} />
+                        <Input placeholder="What are we building?" className="bg-background/50 focus:bg-background transition-colors" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -223,7 +217,7 @@ const Contact = () => {
                       <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell me about your project, timeline, and budget..."
+                          placeholder="Tell me about the project — what it does, where you&apos;re at, and what you need from me..."
                           className="min-h-[150px] resize-none bg-background/50 focus:bg-background transition-colors"
                           {...field}
                         />
@@ -244,7 +238,7 @@ const Contact = () => {
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        Send Message
+                        Send It →
                       </>
                     )}
                   </span>

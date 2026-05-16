@@ -27,9 +27,9 @@ const Skills = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-10"
       >
-        <h2 className="text-3xl font-bold mb-4">Skills & Technologies</h2>
+        <h2 className="text-3xl font-bold mb-4">My Arsenal</h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Tools and technologies I use to build production-ready applications.
+          Every tool below is battle-tested on real projects — not just tutorials.
         </p>
       </motion.div>
 

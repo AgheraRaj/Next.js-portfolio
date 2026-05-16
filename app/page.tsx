@@ -25,7 +25,7 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          GitHub Activity
+          Code I Actually <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Commit</span>
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

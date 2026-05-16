@@ -187,9 +187,11 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-10"
       >
-        <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Work That <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Ships</span>
+        </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          A selection of projects I&apos;ve built — click any card to see the full case study.
+          Real products, real problems, real solutions. Click any project to read the full case study — the problem I was handed, how I solved it, and what it achieved.
         </p>
       </motion.div>
 

@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { timeline } from "@/constants";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, GraduationCap, Star, Zap, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Briefcase, GraduationCap, Star, Zap, Code2 } from "lucide-react";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 const typeConfig = {
@@ -14,14 +13,26 @@ const typeConfig = {
   current:    { icon: Zap,          color: "text-green-500",  bg: "bg-green-500/10 border-green-500/20", shadow: "shadow-green-500/20" },
 } as const;
 
-// ─── Stats ────────────────────────────────────────────────────────────────────
-const stats = [
-  { value: "3+",   label: "Years Coding" },
-  { value: "10+",  label: "Projects Built" },
-  { value: "5+",   label: "Tech Stacks Mastered" }, // Next.js, React, Node, etc.
-  { value: "100%", label: "Client Commitment" },
+const corePillars = [
+  { 
+    title: "Speed Without Sacrifice", 
+    description: "I optimize for Core Web Vitals and sub-second load times — because a beautiful app that loads slowly is a dead app.",
+    icon: Zap,
+    color: "from-violet-500/20 to-fuchsia-500/20"
+  },
+  { 
+    title: "Code That Outlives the Sprint", 
+    description: "Every system I build is modular, documented, and designed to be extended — not rewritten six months later.",
+    icon: Code2,
+    color: "from-blue-500/20 to-cyan-500/20"
+  },
+  { 
+    title: "Interfaces Users Don't Notice", 
+    description: "The best UIs are invisible. I obsess over micro-interactions and layout so users focus on their goals, not the tool.",
+    icon: Star,
+    color: "from-fuchsia-500/20 to-purple-500/20"
+  }
 ];
-
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -47,7 +58,7 @@ const About = () => {
       <div className="max-w-8xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
-          {/* Left Column: Intro & Stats */}
+          {/* Left Column: Intro & Core Pillars */}
           <div className="lg:col-span-5 relative">
             <div className="sticky top-28 space-y-10">
               
@@ -57,46 +68,45 @@ const About = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <Badge variant="outline" className="mb-4 bg-primary/5 border-primary/20 text-primary px-3 py-1 text-sm font-medium">
-                  Who am I
+                <Badge variant="outline" className="mb-4 bg-fuchsia-500/10 border-fuchsia-500/20 text-fuchsia-500 px-3 py-1 text-sm font-medium">
+                  The Developer
                 </Badge>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                  Crafting Digital <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">Experiences</span>
+                  Built to Ship. <br/>
+                  Wired to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">Scale.</span>
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  I&apos;m a full-stack developer based in Ahmedabad, India, specializing in building premium, high-performance web applications. I partner with businesses to transform their ideas into scalable, user-centric digital products.
+                  I&apos;m Raj — a full-stack developer from Ahmedabad who builds complete web products, not just interfaces. I architect the backend, craft the frontend, and own the deployment — so you get one engineer with the full picture, not a hand-off chain.
                 </p>
-                <div className="flex gap-4">
-                  <Button className="rounded-md" asChild>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                      Download Resume <Download className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </div>
               </motion.div>
 
-              <motion.div 
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-              >
-                {stats.map((stat, i) => (
+              <div className="space-y-4">
+                {corePillars.map((pillar, i) => (
                   <motion.div
-                    key={stat.label}
-                    variants={itemVariants}
-                    className="p-5 rounded-2xl bg-card/40 backdrop-blur-xl border border-border/50 hover:border-primary/30 transition-colors group relative overflow-hidden"
+                    key={pillar.title}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="group p-5 rounded-2xl bg-card/40 backdrop-blur-xl border border-border/50 hover:border-primary/30 transition-all duration-300 relative overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative z-10">
-                      <p className="text-3xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">{stat.value}</p>
-                      <p className="text-sm font-medium text-muted-foreground leading-tight">{stat.label}</p>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${pillar.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                    <div className="relative z-10 flex gap-5 items-start">
+                      <div className="mt-1 w-10 h-10 rounded-xl bg-background border border-border flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-primary/50 transition-all duration-300">
+                        <pillar.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                          {pillar.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {pillar.description}
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </div>
 
@@ -111,7 +121,7 @@ const About = () => {
             >
               <h3 className="text-2xl font-bold mb-10 flex items-center gap-3">
                 <Zap className="w-6 h-6 text-primary" />
-                My Journey
+                How I Got Here
               </h3>
 
               {/* Modern Timeline Container */}
@@ -161,9 +171,9 @@ const About = () => {
                                 {item.title}
                               </h4>
                               {item.type === "current" && (
-                                <span className="px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-bold bg-green-500/10 text-green-500 border border-green-500/20 animate-pulse">
+                                <Badge variant="outline" className="bg-green-500/10 border-green-500/20 text-green-500 hover:bg-green-500/20 transition-colors">
                                   Current
-                                </span>
+                                </Badge>
                               )}
                             </div>
                             <p className="text-muted-foreground text-sm leading-relaxed relative z-10">

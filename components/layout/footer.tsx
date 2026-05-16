@@ -15,27 +15,27 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 mb-16">
           {/* Brand & Bio */}
           <div className="md:col-span-12 lg:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 shadow-sm">
+            <Link href="/" className="inline-flex items-center gap-2 mb-6 group">
+              <div className="w-9 h-9 rounded-lg border border-border flex items-center justify-center bg-primary text-primary-foreground shrink-0">
                 <Code2 className="w-5 h-5" />
               </div>
-              <span className="text-2xl font-bold tracking-tight">Raj Aghera</span>
+              <span className="text-xl font-bold tracking-tight">Raj Aghera</span>
             </Link>
             <p className="text-muted-foreground leading-relaxed max-w-sm mb-8">
-              Full Stack Developer crafting intelligent, scalable, and visually stunning web applications with modern architecture.
+              Full-stack engineer who builds complete products — from the database schema to the deployed UI. Based in Ahmedabad, available worldwide.
             </p>
             <div className="flex gap-3">
-              <Button variant="outline" size="icon" className="hover:text-primary hover:border-primary transition-colors" asChild>
+              <Button variant="outline" size="icon" asChild>
                 <a href="https://github.com/AgheraRaj" target="_blank" rel="noopener noreferrer">
                   <Github className="w-4 h-4" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" className="hover:text-primary hover:border-primary transition-colors" asChild>
+              <Button variant="outline" size="icon" asChild>
                 <a href="https://www.linkedin.com/in/raj-aghera-391b25248/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-4 h-4" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" className="hover:text-primary hover:border-primary transition-colors" asChild>
+              <Button variant="outline" size="icon" asChild>
                 <a href="mailto:rajaghera2004@gmail.com">
                   <Mail className="w-4 h-4" />
                 </a>
@@ -65,7 +65,7 @@ export function Footer() {
           <div className="md:col-span-7 lg:col-span-3">
             <h4 className="text-foreground font-semibold mb-6">Contact</h4>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-center gap-3 text-muted-foreground">
+              <li className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group cursor-pointer">
                 <div className="w-9 h-9 rounded-full bg-secondary/50 flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-colors shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
@@ -92,10 +92,11 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row justify-start items-start">
-          <p className="text-sm text-muted-foreground text-left md:text-left">
-            © {new Date().getFullYear()} Raj Aghera. All rights reserved.
-          </p>
+        <div className="pt-8 border-t border-border/40">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Raj Aghera. Built with Next.js & obsession.</p>
+            <p className="text-xs text-muted-foreground/50">Ahmedabad, India 🇮🇳</p>
+          </div>
         </div>
       </div>
     </footer>
